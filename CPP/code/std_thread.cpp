@@ -1,6 +1,3 @@
-# 多线程实现方式
-1. std::thread
-```cpp
 #include <iostream>
 #include <thread>
 #include <vector>
@@ -24,7 +21,7 @@ int main()
     std::vector<std::thread> threads;
     for (int i = 0; i < 5; ++i)
     {
-        threads.emplace_back(thread_function, i);
+        threads.emplace_back(std::thread(thread_function, i));
     }
 
     for (auto &t : threads)
@@ -39,15 +36,3 @@ int main()
 
     return 0;
 }
-```
-> [Run](code/std_thread.cpp)
-1. std::async
-2. pthread（linux）
-
-## Qt中多线程的实现方式
-1. QThread类的run
-2. QThread类的moveToThread
-3. QRunnalble的run
-4. QtConcurrent的run
-
-# 线程同步方法
