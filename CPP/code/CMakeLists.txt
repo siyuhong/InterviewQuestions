@@ -5,5 +5,5 @@ project(cpp_code)
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
-add_executable(exp_stdthread std_thread.cpp)
-target_link_libraries(exp_stdthread)
+add_executable(exp_std_thread std_thread.cpp)
+target_link_libraries(exp_std_thread)
